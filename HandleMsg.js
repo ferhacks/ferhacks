@@ -293,7 +293,7 @@ module.exports = HandleMsg = async (aruga, message) => {
                         aruga.reply(from, '¡Algo salió mal!')
                     })
             } else {
-                await aruga.reply(from, `¡Sin imagen! Envíe una imagen ${prefix}meme <teks_atas> | <teks_bawah>\nejemplo: ${prefix}meme tu vieja | en mi cama`, id)
+                await aruga.reply(from, `¡Sin imagen! Y/o texto Envíe una imagen y/o inserte su texto ${prefix}meme <teks_atas> | <teks_bawah>\nejemplo: ${prefix}meme tu vieja | en mi cama`, id)
             }
             break
         case 'quotemaker':
@@ -570,7 +570,7 @@ module.exports = HandleMsg = async (aruga, message) => {
                 .then(body => {
                     let randomnime = body.split('\n')
                     let randomnimex = randomnime[Math.floor(Math.random() * randomnime.length)]
-                    aruga.sendFileFromUrl(from, randomnimex, '', 'Nee..', id)
+                    aruga.sendFileFromUrl(from, randomnimex, '', 'vaya..', id)
                 })
                 .catch(() => {
                     aruga.reply(from, 'Ada yang Error!', id)
